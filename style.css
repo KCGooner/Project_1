@@ -37,3 +37,14 @@
     font-size: 60px;
     position: absolute
 }
+
+#searchbar{
+    background-color: skyblue;
+}
+.control{
+    display: inline-block;
+}
+.input{
+    width: 100%;
+    background-color: blanchedalmond;
+}
