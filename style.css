@@ -32,3 +32,15 @@
     text-align: center;
     font-size: 60px;
 }
+#searchbar {
+    background-color: blue;
+}
+#pagetitle {
+    background-color: crimson;
+}
+#refreshbutton {
+    background-color: darkgreen;
+}
+.input {
+    width: auto;
+}
