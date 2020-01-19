@@ -3,8 +3,10 @@
 //https://www.fantasyfootballnerd.com/service/nfl-teams/json/pp964njgnuwu
 
 const nflArrestSite = "http://nflarrest.com/api/v1/player/arrests/";
-const nflTeamSite = "https://www.fantasyfootballnerd.com/service/nfl-teams/json/pp964njgnuwu";
-const nflPlayerSite = "https://www.fantasyfootballnerd.com/service/nfl-teams/json/pp964njgnuwu";
+const nflTeamSite1 = "https://www.fantasyfootballnerd.com/service/nfl-teams/json/pp964njgnuwu";
+const nflPlayerSite1 = "https://www.fantasyfootballnerd.com/service/nfl-teams/json/pp964njgnuwu";
+const nflTeamSite = "http://www.markstout.com/api/nfl/teams";
+const nflPlayerSite = "http://www.markstout.com/api/nfl/players"
 var playerName = "Aldon%20Smith";
 
 getTeams();
