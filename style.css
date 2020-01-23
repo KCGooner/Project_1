@@ -48,6 +48,36 @@
     width: 100%;
     background-color: blanchedalmond;
 }
+.teams {
+    background-color: green;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    border: black 1px solid;
+    margin: 1px;
+    display: inline-block;
+    border-radius: 1px;
+    padding: 18px 0px;
+    color: white;
+    box-shadow: gray 5px;
+}
 .team {
-    
+    background-color: gray;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 18px 0px;
+}
+.player {
+    background-color: gray;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 18px 0px;
 }
