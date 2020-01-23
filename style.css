@@ -1,46 +1,50 @@
-#title {
+
+#titlecontainer{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    background-color: silver;
+    color: black;
+    text-align: center;
+}
+#title{
     font-size: 100px;
 }
-#slogan {
+
+#slogan{
     font-size: 60px;
 }
-#titlecontainer {
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: auto;
-    background-color: beige;
-    color: black;
-    text-align: center;
-}
-#startbtn {
-    height: 150px;
-    width: 400px;
-    align-content: center;
-    background-color: forestgreen;
-    font-size: 50px;
-    color: black;
-}
-#button {
+
+#button{
     margin: 20px;
 }
-#textbox {
+
+#startBtn{
+    height: 150px;
+    width: 400px;
+    background-color: forestgreen;
+    font-size: 50px;
+    color: black
+}
+
+#textbox{
     border: 2px solid black;
     border-radius: 5px;
     margin: auto;
-    background-color: beige;
+    background-color: red;
     color: black;
     text-align: center;
     font-size: 60px;
+    position: absolute
 }
-#searchbar {
-    background-color: blue;
+
+#searchbar{
+    background-color: skyblue;
 }
-#pagetitle {
-    background-color: crimson;
+.control{
+    display: inline-block;
 }
-#refreshbutton {
-    background-color: darkgreen;
-}
-.input {
-    width: auto;
+.input{
+    width: 100%;
+    background-color: blanchedalmond;
 }
