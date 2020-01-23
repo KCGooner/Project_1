@@ -37,10 +37,28 @@
     font-size: 60px;
     position: absolute
 }
-
-#searchbar{
-    background-color: skyblue;
+#pagetitle {
+    text-align: center;
+    font-size: xx-large;
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 0px;
 }
+#homeBtn:hover {
+    color: red;
+}
+#homeBtn {
+    font-size: large;
+    margin: 10px 0px 0px 5px;
+}
+#backBtn {
+    font-size: large;
+    margin: 10px 0px 0px 0px;
+}
+#backBtn:hover {
+    color: red;
+}
+
 .control{
     display: inline-block;
 }
