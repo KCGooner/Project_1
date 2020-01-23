@@ -37,26 +37,41 @@
     font-size: 60px;
     position: absolute
 }
-#pagetitle {
+
+#homeBtn{
     text-align: center;
     font-size: xx-large;
-    margin: 0px;
-    padding-top: 15px;
-    padding-bottom: 0px;
-}
-#homeBtn:hover {
-    color: red;
-}
-#homeBtn {
-    font-size: large;
-    margin: 10px 0px 0px 5px;
-}
-#backBtn {
-    font-size: large;
     margin: 10px 0px 0px 0px;
 }
-#backBtn:hover {
+
+#homeBtn:hover{
     color: red;
+}
+
+#backBtn{
+    text-align: center; 
+    font-size: xx-large;
+    margin: 10px 0px 0px 0px;
+}
+
+#backBtn:hover{
+    color: red;
+}
+
+#pagetitle{
+    text-align: center;
+    font-size: 70px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
+#searchbar{
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin: 0px;
 }
 
 .control{
@@ -66,7 +81,16 @@
     width: 100%;
     background-color: blanchedalmond;
 }
-.teams {
+
+/* #teamsbackground{
+background-color: lightblue;
+height: 100%;
+width: 100%;
+margin: 0px;
+padding: 0px;
+} */
+
+.teams{
     background-color: lightblue;
     color: black;
     width: 200px;
@@ -79,7 +103,8 @@
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
-.team {
+
+.team{
     background-color: lightblue;
     color: black;
     width: 200px;
@@ -92,7 +117,8 @@
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
-.player {
+
+.player{
     background-color: lightblue;
     color: black;
     width: 200px;
