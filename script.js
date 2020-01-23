@@ -81,6 +81,13 @@ function getTeams() {
                 teamDiv.attr("team-name", team.code);
                 teamDiv.append(team.fullName);
 
+
+                // $(".teams").style.backgroundColor = "gray";
+
+                // // teams.style.backgroundColor = "gray";
+
+                // teamDiv.style.backgroundColor = "gray";
+
                 //teamUl.append("<li class='list-team-item' team-code='" + team.code + "'>" + team.fullName + "</li>");
             })
 
