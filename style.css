@@ -38,8 +38,40 @@
     position: absolute
 }
 
+#homeBtn{
+    text-align: center;
+    font-size: xx-large;
+    margin: 10px 0px 0px 0px;
+}
+
+#homeBtn:hover{
+    color: red;
+}
+
+#backBtn{
+    text-align: center; 
+    font-size: xx-large;
+    margin: 10px 0px 0px 0px;
+}
+
+#backBtn:hover{
+    color: red;
+}
+
+#pagetitle{
+    text-align: center;
+    font-size: 70px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
 #searchbar{
-    background-color: skyblue;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin: 0px;
 }
 .control{
     display: inline-block;
@@ -49,7 +81,52 @@
     background-color: blanchedalmond;
 }
 
+/* #teamsbackground{
+background-color: lightblue;
+height: 100%;
+width: 100%;
+margin: 0px;
+padding: 0px;
+} */
+
 .teams{
+    background-color: lightblue;
+    color: black;
     width: 200px;
     height: 60px;
+    text-align: center;
+    padding: 18px 0px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
+}
+
+.team{
+    background-color: lightblue;
+    color: black;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    padding: 18px 0px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
+}
+
+.player{
+    background-color: lightblue;
+    color: black;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    padding: 18px 0px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
 }

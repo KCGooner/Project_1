@@ -10,90 +10,114 @@ const nflPlayerSite = "http://www.markstout.com/api/nfl/players"
 var playerName = "Aldon%20Smith";
 var teamName = "KC";
 var playerId = "3311"
-//getTeams();
+getTeams();
 getTeamPlayers(teamName);
 getPlayer(playerId);
-getArrestInfo()
+//getArrestInfo()
 
 ///////////////////////////////////////////////////////////
 //get a single players info using the ID in the api
-function getPlayer(playerId){
-  console.log(playerId);
-  $.get({
-    url: nflPlayerSite,
-    method: "GET",
-    dataType: 'json'
-  })
-  .then(function (response) {
-    console.log(response);
-    let playersUl = $('<ul/>').addClass('list-player');
-    $("body").append(playersUl);
-      response.Players.forEach(function(player){
-        if(player.playerId === playerId){
-          console.log(player);
-          playersUl.append("<li class='list-player-item' player-name='" + player.displayName + "'>" + player.displayName + "<br>" + player.jersey + player.height + player.dob + "</li>");  
-        }
-      })
-     })
+function getPlayer(playerId) {
+    console.log(playerId);
+    $.get({
+        url: nflPlayerSite,
+        method: "GET",
+        dataType: 'json'
+    })
+        .then(function (response) {
+            console.log(response);
+            //let playersUl = $('<ul/>').addClass('list-player');
+            //$("body").append(playersUl);
+            $("#teamcontainer").empty();
+            response.Players.forEach(function (player) {
+                if (player.playerId === playerId) {
+                    console.log(player);
+                    let playerDiv = $("<div>").addClass("player");
+                    $("#teamcontainer").append(playerDiv);
+                    playerDiv.attr("player-name", player.displayName);
+                    playerDiv.append(player.displayName);
+                    //playersUl.append("<li class='list-player-item' player-name='" + player.displayName + "'>" + player.displayName + "<br>" + player.jersey + player.height + player.dob + "</li>");
+                }
+            })
+        })
 }
 
 ///////////////////////////////////////////////////////////
 //list of players per team. Team is passed as the argument
-function getTeamPlayers(team){
-  console.log(team);
-  $.get({
-    url: nflPlayerSite,
-    method: "GET",
-    dataType: 'json'
-  })
-  .then(function (response) {
-    console.log(response);
-    let playersUl = $('<ul/>').addClass('list-players');
-    $("body").append(playersUl);
-      response.Players.forEach(function(player){
-        if(player.team === teamName){
-          console.log(player);
-          playersUl.append("<li class='list-players-item' player-code='" + player.playerId + "'>" + player.displayName + "</li>");  
-        }
-      })
-     })
+function getTeamPlayers(team) {
+    console.log(team);
+    $.get({
+        url: nflPlayerSite,
+        method: "GET",
+        dataType: 'json'
+    })
+        .then(function (response) {
+            console.log(response);
+            $("#teamcontainer").empty();
+            //let playersUl = $('<ul/>').addClass('list-players');
+            //$("body").append(playersUl);
+            response.Players.forEach(function (player) {
+                if (player.team === teamName) {
+                    console.log(player);
+                    let playersDiv = $("<div>").addClass("team");
+                    $("#teamcontainer").append(playersDiv);
+                    playersDiv.attr("player-code", player.playerId);
+                    playersDiv.append(player.displayName);
+
+                    //playersUl.append("<li class='list-players-item' player-code='" + player.playerId + "'>" + player.displayName + "</li>");
+                }
+            })
+        })
 }
 
 ///////////////////////////////////////////////////////////
 //Function to get team info and update divs
-function getTeams(){
-  console.log("getTeams");
-  $.get({
-    url: nflTeamSite,
-    method: "GET",
-    dataType: 'json'
-  })
-  .then(function (response) {
-    console.log(response);
-    let teamUl = $('<ul/>').addClass('list-team');
-    $("body").append(teamUl);
-    console.log(response.NFLTeams.length);
-    response.NFLTeams.forEach(function(team){
-      console.log(team.fullName);
-      teamUl.append("<li class='list-team-item' team-code='" + team.code + "'>" + team.fullName + "</li>");
+function getTeams() {
+    console.log("getTeams");
+    $.get({
+        url: nflTeamSite,
+        method: "GET",
+        dataType: 'json'
     })
-    
+        .then(function (response) {
+            console.log(response);
+            //let teamUl = $('<ul/>').addClass('list-team');
+            //$("body").append(teamUl);
+            $("#teamcontainer").empty();
+            console.log(response.NFLTeams.length);
+            response.NFLTeams.forEach(function (team) {
+                console.log(team.fullName);
+                let teamDiv = $("<div>").addClass("teams");
+                $("#teamcontainer").append(teamDiv);
+                teamDiv.attr("team-name", team.code);
+                teamDiv.append(team.fullName);
 
-  })
+
+                // $(".teams").style.backgroundColor = "gray";
+
+                // // teams.style.backgroundColor = "gray";
+
+                // teamDiv.style.backgroundColor = "gray";
+
+                //teamUl.append("<li class='list-team-item' team-code='" + team.code + "'>" + team.fullName + "</li>");
+            })
+
+
+        })
 }
 ////////////////////////////////////////////////////////
 // function to get the arrest info, and update divs
 function getArrestInfo() {
     let arrestAjax = $.ajax({
-      url: nflArrestSite + playerName,
-      method: "GET",
+        url: nflArrestSite + playerName,
+        method: "GET",
     })
-      // We store all of the retrieved data inside of an object called "response"
-      .then(function (response) {
-        console.log(response);
-        
-      })
-  
-  }
+        // We store all of the retrieved data inside of an object called "response"
+        .then(function (response) {
+            console.log(response);
+
+        })
+
+}
 
 
