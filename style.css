@@ -49,35 +49,41 @@
     background-color: blanchedalmond;
 }
 .teams {
-    background-color: green;
+    background-color: lightblue;
+    color: black;
     width: 200px;
     height: 60px;
     text-align: center;
-    border: black 1px solid;
-    margin: 1px;
-    display: inline-block;
-    border-radius: 1px;
     padding: 18px 0px;
-    color: white;
-    box-shadow: gray 5px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
 }
 .team {
-    background-color: gray;
+    background-color: lightblue;
+    color: black;
     width: 200px;
     height: 60px;
     text-align: center;
+    padding: 18px 0px;
     margin: 5px;
     display: inline-block;
-    border-radius: 6px;
-    padding: 18px 0px;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
 }
 .player {
-    background-color: gray;
+    background-color: lightblue;
+    color: black;
     width: 200px;
     height: 60px;
     text-align: center;
+    padding: 18px 0px;
     margin: 5px;
     display: inline-block;
-    border-radius: 6px;
-    padding: 18px 0px;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
 }
