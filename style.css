@@ -38,8 +38,40 @@
     position: absolute
 }
 
+#homeBtn{
+    text-align: center;
+    font-size: xx-large;
+    margin: 10px 0px 0px 0px;
+}
+
+#homeBtn:hover{
+    color: red;
+}
+
+#backBtn{
+    text-align: center; 
+    font-size: xx-large;
+    margin: 10px 0px 0px 0px;
+}
+
+#backBtn:hover{
+    color: red;
+}
+
+#pagetitle{
+    text-align: center;
+    font-size: 70px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+
 #searchbar{
-    background-color: skyblue;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin: 0px;
 }
 .control{
     display: inline-block;
