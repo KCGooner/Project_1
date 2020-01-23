@@ -11,8 +11,8 @@ var playerName = "Aldon%20Smith";
 var teamName = "KC";
 var playerId = "3311"
 getTeams();
-//getTeamPlayers(teamName);
-//getPlayer(playerId);
+getTeamPlayers(teamName);
+getPlayer(playerId);
 //getArrestInfo()
 
 ///////////////////////////////////////////////////////////
@@ -26,12 +26,17 @@ function getPlayer(playerId) {
     })
         .then(function (response) {
             console.log(response);
-            let playersUl = $('<ul/>').addClass('list-player');
-            $("body").append(playersUl);
+            //let playersUl = $('<ul/>').addClass('list-player');
+            //$("body").append(playersUl);
+            $("#teamcontainer").empty();
             response.Players.forEach(function (player) {
                 if (player.playerId === playerId) {
                     console.log(player);
-                    playersUl.append("<li class='list-player-item' player-name='" + player.displayName + "'>" + player.displayName + "<br>" + player.jersey + player.height + player.dob + "</li>");
+                    let playerDiv = $("<div>").addClass("player");
+                    $("#teamcontainer").append(playerDiv);
+                    playerDiv.attr("player-name", player.displayName);
+                    playerDiv.append(player.displayName);
+                    //playersUl.append("<li class='list-player-item' player-name='" + player.displayName + "'>" + player.displayName + "<br>" + player.jersey + player.height + player.dob + "</li>");
                 }
             })
         })
@@ -48,12 +53,18 @@ function getTeamPlayers(team) {
     })
         .then(function (response) {
             console.log(response);
-            let playersUl = $('<ul/>').addClass('list-players');
-            $("body").append(playersUl);
+            $("#teamcontainer").empty();
+            //let playersUl = $('<ul/>').addClass('list-players');
+            //$("body").append(playersUl);
             response.Players.forEach(function (player) {
                 if (player.team === teamName) {
                     console.log(player);
-                    playersUl.append("<li class='list-players-item' player-code='" + player.playerId + "'>" + player.displayName + "</li>");
+                    let playersDiv = $("<div>").addClass("team");
+                    $("#teamcontainer").append(playersDiv);
+                    playersDiv.attr("player-code", player.playerId);
+                    playersDiv.append(player.displayName);
+
+                    //playersUl.append("<li class='list-players-item' player-code='" + player.playerId + "'>" + player.displayName + "</li>");
                 }
             })
         })
@@ -72,7 +83,7 @@ function getTeams() {
             console.log(response);
             //let teamUl = $('<ul/>').addClass('list-team');
             //$("body").append(teamUl);
-
+            $("#teamcontainer").empty();
             console.log(response.NFLTeams.length);
             response.NFLTeams.forEach(function (team) {
                 console.log(team.fullName);
