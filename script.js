@@ -10,12 +10,30 @@ const nflPlayerSite = "http://www.markstout.com/api/nfl/players"
 var playerName = "Aldon%20Smith";
 //var teamName = "KC";
 //var playerId = "3311"
+
+
 getTeams();
 
+
 $(document).on("click", ".teams", function () {
-    getTeamPlayers($(this).attr("team-name"))
-    $.mobile.defaultPageTransition="slide";
-});
+    console.log($(this));
+    var currentThis = $(this)
+    //getTeamPlayers(currentThis.attr("team-name"));
+    $("#teamcontainer").fadeOut('slow', function() {
+    getTeamPlayers(currentThis.attr("team-name"));
+    });
+    $( "#teamcontainer" ).effect( "slide", {}, 750, function() {
+        console.log(currentThis);
+            //getTeamPlayers(currentThis.attr("team-name"));
+            // $( "#teamcontainer" ).removeAttr( "style" ).hide().fadeIn();
+
+    //     setTimeout(function() {
+             
+    // }, 1001)
+})
+})    
+    //getTeamPlayers($(this).attr("team-name"))
+
 $(document).on("click", ".team", function () {
     getPlayer($(this).attr("player-code"));
 });
@@ -32,6 +50,34 @@ function swipeLeftHandler (event){
 //getTeamPlayers(teamName);
 //getPlayer(playerId);
 //getArrestInfo()
+function runEffect() {
+    // get effect type from
+    var selectedEffect = "fold";
+
+    // Most effect types need no options passed by default
+    var options = {};
+    // some effects have required parameters
+    if ( selectedEffect === "scale" ) {
+      options = { percent: 50 };
+    } else if ( selectedEffect === "transfer" ) {
+      options = { to: "#button", className: "ui-effects-transfer" };
+    } else if ( selectedEffect === "size" ) {
+      options = { to: { width: 200, height: 60 } };
+    }
+
+    // Run the effect
+    $( "#teamcontainer" ).effect( selectedEffect, options, 5000, getTeamPlayers($(this).attr("team-name")));
+  };
+    // Callback function to bring a hidden box back
+    function callback() {
+        return new Promise( function(resolve){
+            setTimeout(function() {
+                 $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+                resolve("stuff");
+        }, 5000 );
+        
+      });
+    }
 
 ///////////////////////////////////////////////////////////
 //get a single players info using the ID in the api
@@ -115,7 +161,7 @@ function getTeams() {
                 console.log(team.fullName);
                 let link = $("<a>");
                 $("#teamcontainer").append(link);
-                link.attr("href", "#");
+                link.attr("href", "#page2");
                 link.attr("data-transition", "flip");
 
                 let teamDiv = $("<div>").addClass("teams");
