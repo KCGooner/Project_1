@@ -14,6 +14,7 @@ getTeams();
 
 $(document).on("click", ".teams", function () {
     getTeamPlayers($(this).attr("team-name"))
+    $.mobile.defaultPageTransition="slide";
 });
 $(document).on("click", ".team", function () {
     getPlayer($(this).attr("player-code"));
@@ -21,15 +22,22 @@ $(document).on("click", ".team", function () {
 $(document).on("click", ".player", function () {
     getArrestInfo($(this).attr("player-name"));
 })
+
+$(document).on("swipeleft", ".teams", swipeLeftHandler);
+function swipeLeftHandler (event){
+    $(event.target).addClass("swiped");
+    console.log(event.target);
+}
+
 //getTeamPlayers(teamName);
 //getPlayer(playerId);
-getArrestInfo()
+//getArrestInfo()
 
 ///////////////////////////////////////////////////////////
 //get a single players info using the ID in the api
 function getPlayer(playerId) {
     console.log(playerId);
-    $.get({
+    $.ajax({
         url: nflPlayerSite,
         method: "GET",
         dataType: 'json'
@@ -92,7 +100,7 @@ function getTeamPlayers(team) {
 //Function to get team info and update divs
 function getTeams() {
     console.log("getTeams");
-    $.get({
+    $.ajax({
         url: nflTeamSite,
         method: "GET",
         dataType: 'json'
@@ -105,8 +113,13 @@ function getTeams() {
             console.log(response.NFLTeams.length);
             response.NFLTeams.forEach(function (team) {
                 console.log(team.fullName);
+                let link = $("<a>");
+                $("#teamcontainer").append(link);
+                link.attr("href", "#");
+                link.attr("data-transition", "flip");
+
                 let teamDiv = $("<div>").addClass("teams");
-                $("#teamcontainer").append(teamDiv);
+                $(link).append(teamDiv);
                 teamDiv.attr("team-name", team.code);
                 teamDiv.append(team.fullName);
 
