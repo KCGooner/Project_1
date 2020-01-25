@@ -1,9 +1,6 @@
 
 #titlecontainer{
-    border: 2px solid black;
-    border-radius: 5px;
     margin: auto;
-    background-color: silver;
     color: black;
     text-align: center;
 }
@@ -22,16 +19,13 @@
 #startBtn{
     height: 150px;
     width: 400px;
-    background-color: forestgreen;
+    background-color: green;
     font-size: 50px;
     color: black
 }
 
 #textbox{
-    border: 2px solid black;
-    border-radius: 5px;
     margin: auto;
-    background-color: red;
     color: black;
     text-align: center;
     font-size: 60px;
@@ -75,14 +69,6 @@
 }
 
 
-/* #teamsbackground{
-background-color: lightblue;
-height: 100%;
-width: 100%;
-margin: 0px;
-padding: 0px;
-} */
-
 .teams{
     background-color: lightblue;
     color: black;
@@ -115,12 +101,13 @@ padding: 0px;
 .player{
     background-color: lightblue;
     color: black;
-    width: 200px;
-    height: 60px;
+    width: 250px;
+    height: 100px;
     text-align: center;
     padding: 10px 0px;
     margin: 5px;
-    margin-left: 25px;
+    /* margin-left: 30px; */
+
     display: inline-block;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
@@ -138,20 +125,27 @@ padding: 0px;
 }
 
 #playercontainer{
+<<<<<<< HEAD
+=======
+    position: absolute;
+    left: 510px;
+>>>>>>> 7487f9d713324e951e7b97614e1090eacb3025f5
     display: none;
 }
 
 .arrows{
     font-weight: bold;
-    font-size: xx-large;
+    font-size: 70px;
 }
 
 #left{
     float: left;
+    margin-right: 20px;
 }
 
 #right{
     float: right;
+    margin-left: 20px;
 }
 
 .playerStat{
