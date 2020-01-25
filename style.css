@@ -135,18 +135,9 @@ padding: 0px;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-
-
-
-.hidden {
-    display: none;
-
 }
 
-
 #playercontainer{
-    position: absolute;
-    left: 545px;
     display: none;
 }
 
