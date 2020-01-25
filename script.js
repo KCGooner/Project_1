@@ -11,6 +11,21 @@ var playerName = "Aldon%20Smith";
 //var teamName = "KC";
 //var playerId = "3311"
 
+$( document ).on( "pagecreate", "#demo-page", function() {
+        $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+            // We check if there is no open panel on the page because otherwise
+            // a swipe to close the left panel would also open the right panel (and v.v.).
+            // We do this by checking the data that the framework stores on the page element (panel: open).
+            if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                if ( e.type === "swipeleft" ) {
+                    $( "#good-panel" ).panel( "open" );
+                } else if ( e.type === "swiperight" ) {
+                    $( "#felon-panel" ).panel( "open" );
+                }
+            }
+        });
+    });
+
 
 getTeams();
 
@@ -34,12 +49,36 @@ $(document).on("click", ".teams", function () {
 })    
     //getTeamPlayers($(this).attr("team-name"))
 
-$(document).on("click", ".team", function () {
-    
-});
+//$(document).on("click", ".team", function () {
+
+    //var teamThis = $(this);
+    //$("#teamcontainer").fadeOut('slow', function() {
+      //  getPlayer(teamThis.attr("player-code"));
+    //});
+    //$("#teamcontainer").effect( "slide", {}, 750, function() {
+    //    console.log(teamThis)
+  //  })
+
+//});
+
 $(document).on("click", ".player", function () {
+    $("#playercontainer").show();
     getArrestInfo($(this).attr("player-name"));
 })
+$(document).on("click", ".team", function () {
+    var teamThis = $(this);
+    $("#teamcontainer").fadeOut('slow', function() {
+        getPlayer(teamThis.attr("player-code"));
+        getPlayer($(this).attr("player-code"));
+    });
+    
+    // fixes the animation lag when clicking a player on a team
+    $("#playercontainer").delay(1000).effect( "slide", {}, 750, function() {
+        console.log(teamThis)
+        console.log(this)
+    })
+});
+
 
 
 ////////////
@@ -69,45 +108,56 @@ $(document).on("click", ".team", function () {
 $(document).on("click", ".player", function () {
     getArrestInfo($(this).attr("player-name"));
 })
-///////////////
 
-$(document).on("swipeleft", ".teams", swipeLeftHandler);
-function swipeLeftHandler (event){
-    $(event.target).addClass("swiped");
-    console.log(event.target);
-}
+
+
+// back button functionality
+$(document).on("click", "#backBtn", function() {
+    $("#playercontainer").empty()
+    $("#teamcontainer").effect("slide", {}, 100, function() {
+        console.log(event);
+    })
+    getTeams();
+    
+});
 
 //getTeamPlayers(teamName);
 //getPlayer(playerId);
 //getArrestInfo()
-function runEffect() {
-    // get effect type from
-    var selectedEffect = "fold";
+// function runEffect() {
+//     // get effect type from
+//     var selectedEffect = "fold";
 
-    // Most effect types need no options passed by default
-    var options = {};
-    // some effects have required parameters
-    if ( selectedEffect === "scale" ) {
-      options = { percent: 50 };
-    } else if ( selectedEffect === "transfer" ) {
-      options = { to: "#button", className: "ui-effects-transfer" };
-    } else if ( selectedEffect === "size" ) {
-      options = { to: { width: 200, height: 60 } };
-    }
+//     // Most effect types need no options passed by default
+//     var options = {};
+//     // some effects have required parameters
+//     if ( selectedEffect === "scale" ) {
+//       options = { percent: 50 };
+//     } else if ( selectedEffect === "transfer" ) {
+//       options = { to: "#button", className: "ui-effects-transfer" };
+//     } else if ( selectedEffect === "size" ) {
+//       options = { to: { width: 200, height: 60 } };
+//     }
 
-    // Run the effect
-    $( "#teamcontainer" ).effect( selectedEffect, options, 5000, getTeamPlayers($(this).attr("team-name")));
-  };
-    // Callback function to bring a hidden box back
-    function callback() {
-        return new Promise( function(resolve){
-            setTimeout(function() {
-                 $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
-                resolve("stuff");
-        }, 5000 );
+//     // Run the effect
+//     $( "#teamcontainer" ).effect( selectedEffect, options, 5000, getTeamPlayers($(this).attr("team-name")));
+//   };
+//     // Callback function to bring a hidden box back
+//     function callback() {
+//         return new Promise( function(resolve){
+//             setTimeout(function() {
+//                  $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+//                 resolve("stuff");
+//         }, 5000 );
         
-      });
-    }
+//       });
+//     }
+
+function removeElement(playercontainer) {
+    // Removes an element from the document
+    var element = document.getElementById("playercontainer");
+    element.parentNode.removeChild(element);
+}
 
 ///////////////////////////////////////////////////////////
 //get a single players info using the ID in the api
@@ -123,6 +173,7 @@ function getPlayer(playerId) {
             //let playersUl = $('<ul/>').addClass('list-player');
             //$("body").append(playersUl);
             $("#teamcontainer").empty();
+            $("#playercontainer").show();
             response.Players.forEach(function (player) {
                 if (player.playerId === playerId) {
                     console.log(player);

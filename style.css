@@ -115,9 +115,26 @@
     font-size: xx-large;
 }
 
+
+#teamsbackground :not(INPUT):not(TEXTAREA) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+
+
+.hidden {
+    display: none;
+
+}
+
+
 #playercontainer{
     position: absolute;
     left: 510px;
+    display: none;
 }
 
 .arrows{
@@ -147,3 +164,4 @@
     margin-top: 20px;
     padding: 10px;
 }
+

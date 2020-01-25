@@ -18,12 +18,20 @@
     <!-- <script src="script.js"></script> -->
     <!-- <script src="http://code.jquery.com/js/jquery.mobile-1.4.5.min.js"></script> -->
 
+
 </head>
 
 
 <body id=teamsbackground>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <div id="header" data-role="page">
+                  <div data-role="page" id="demo-page" data-url="demo-page" tabindex="0" >
+                <!--     <div class="ui-panel-wrapper"><div data-role="header" data-theme="b" role="banner" class="ui-header ui-bar-b"> -->
+                <!--         <h1 aria-level="1">Swipe left or right</h1> -->
+  
+    <div id="header" >
         <div id="headerrow" class="columns is-multiline is-mobile">
             <div id="backBtn" class="column is-one-quarter">
                 <i class="fas fa-arrow-circle-left"></i> Back
@@ -44,26 +52,43 @@
         </div>
 
 
-        <div id="teamcontainer" data-role="main" class="ui-content">
 
 
 
         </div>
 
-        <div id="playercontainer" data-role="main" class="ui-content">
+
+=======
+     <div id="teamcontainer" data-role="main" class="ui-content"></div>
+        <div id="playercontainer" >
             <div class="arrows" id="left"> < 
             </div>
-            <div class="arrows" id="right"> >
+              <div class="arrows" id="right"> > </div>
+                            <a href="#felon-panel" data-icon="carat-r" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-link ui-btn-left ui-btn ui-icon-carat-r ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Open left panel</a>
+                        <a href="#good-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon ui-link ui-btn-right ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all" data-role="button" role="button">Open right panel</a>
+                 
+            
+  <!--     </div> -->
+                <!-- <div role="main" class="ui-content"> -->
+<!-- /header -->
+                    <!-- /content -->
+                    <div data-role="panel" id="felon-panel" data-display="push" data-theme="b" class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-b ui-panel-animate ui-panel-closed">
+                        <div class="ui-panel-inner"><p>Left reveal panel.</p><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-left ui-btn-right">Close</a>
+                        </div>
+                    </div>
+                    <div data-role="panel" id="good-panel" data-display="push" data-position="right" data-theme="b" class="ui-panel ui-panel-position-right ui-panel-display-push ui-body-b ui-panel-animate ui-panel-closed">
+                        <div class="ui-panel-inner"><p>Right push panel.</p><a href="#" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-mini ui-btn-inline ui-icon-delete ui-btn-icon-right">Close</a>
+                          </div>
+                    </div>
+                <!-- /panel -->
+                <!-- </div>     -->
+
             </div>
+    </div>
+          
 
+    <script src="script.js"></script>
 
-        </div>
-
-
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="script.js"></script>
 
 </body>
 
