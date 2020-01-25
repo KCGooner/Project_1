@@ -104,8 +104,8 @@ function getPlayer(playerId) {
                     $("#teamcontainer").append(statDiv);
                     statDiv.append("<div class='jersey'>Number: " + player.jersey + "</div>");
                     statDiv.append("<div class='position'>Position: " + player.position + "</div>");
-                    statDiv.append("<div class='height'>Height: " + player.height + "</div>");
-                    statDiv.append("<div class='weight'>Weight: " + player.weight + "</div>");
+                    statDiv.append("<div class='height'>Height: " + player.height + "\"" + "</div>");
+                    statDiv.append("<div class='weight'>Weight: " + player.weight +  " lbs" + "</div>");
                     statDiv.append("<div class='college'>College: " + player.college + "</div>");
                     statDiv.append("<div class='DOB'>DOB: " + player.dob + "</div>");
                 }

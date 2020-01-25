@@ -1,9 +1,9 @@
 
 #titlecontainer{
-    border: 2px solid black;
-    border-radius: 5px;
+    /* border: 2px solid black; */
+    /* border-radius: 5px; */
     margin: auto;
-    background-color: silver;
+    /* background-color: silver; */
     color: black;
     text-align: center;
 }
@@ -28,10 +28,10 @@
 }
 
 #textbox{
-    border: 2px solid black;
-    border-radius: 5px;
+    /* border: 2px solid black;
+    border-radius: 5px; */
     margin: auto;
-    background-color: red;
+    /* background-color: red; */
     color: black;
     text-align: center;
     font-size: 60px;
@@ -60,40 +60,15 @@
 
 #pagetitle{
     text-align: center;
-    font-size: 70px;
+    font-size: 25px;
     padding-top: 10px;
     padding-bottom: 0px;
     margin: 0px;
 }
-
-#searchbar{
-    text-align: center;
-    font-size: xx-large;
-    padding-top: 5px;
-    padding-bottom: 0px;
-    margin: 0px;
-}
-
-.control{
-    display: inline-block;
-}
-.input{
-    width: 100%;
-    background-color: blanchedalmond;
-}
-
-/* #teamsbackground{
-background-color: lightblue;
-height: 100%;
-width: 100%;
-margin: 0px;
-padding: 0px;
-} */
-
 .teams{
     background-color: lightblue;
     color: black;
-    width: 200px;
+    width: 224px;
     height: 60px;
     text-align: center;
     padding: 18px 0px;
@@ -103,12 +78,10 @@ padding: 0px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
-
-
 .team{
     background-color: lightblue;
     color: black;
-    width: 200px;
+    width: 224px;
     height: 60px;
     text-align: center;
     padding: 18px 0px;
@@ -118,17 +91,22 @@ padding: 0px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
-
 .player{
     background-color: lightblue;
     color: black;
     width: 200px;
     height: 60px;
-    text-align: center;
     padding: 18px 0px;
     margin: 5px;
+    text-align: center;
     display: inline-block;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
+}
+.playerStat {
+    text-align: center;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
+    width: 50%;
 }
