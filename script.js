@@ -35,11 +35,41 @@ $(document).on("click", ".teams", function () {
     //getTeamPlayers($(this).attr("team-name"))
 
 $(document).on("click", ".team", function () {
-    getPlayer($(this).attr("player-code"));
+    
 });
 $(document).on("click", ".player", function () {
     getArrestInfo($(this).attr("player-name"));
 })
+
+
+////////////
+$(document).on("click", ".team", function () {
+    console.log($(this));
+    var currentThis = $(this)
+    getPlayer($(this).attr("player-code"));
+    //getTeamPlayers(currentThis.attr("team-name"));
+    $("#teamcontainer").fadeOut('slow', function() {
+    getTeamPlayers(currentThis.attr("team-name"));
+    });
+    $( "#playercontainer" ).effect( "slide", {}, 750, function() {
+        console.log(currentThis);
+            getTeamPlayers(currentThis.attr("team-name"));
+           // $( "#teamcontainer" ).removeAttr( "style" ).hide().fadeIn();
+
+        setTimeout(function() {
+             
+    }, 1001)
+})
+})    
+    //getTeamPlayers($(this).attr("team-name"))
+
+// $(document).on("click", ".team", function () {
+//     getPlayer($(this).attr("player-code"));
+// });
+$(document).on("click", ".player", function () {
+    getArrestInfo($(this).attr("player-name"));
+})
+///////////////
 
 $(document).on("swipeleft", ".teams", swipeLeftHandler);
 function swipeLeftHandler (event){
@@ -97,11 +127,11 @@ function getPlayer(playerId) {
                 if (player.playerId === playerId) {
                     console.log(player);
                     let playerDiv = $("<div>").addClass("player");
-                    $("#teamcontainer").append(playerDiv);
+                    $("#playercontainer").append(playerDiv);
                     playerDiv.attr("player-name", player.displayName);
                     playerDiv.append(player.displayName);
                     let statDiv = $("<div>").addClass("playerStat");
-                    $("#teamcontainer").append(statDiv);
+                    $("#playercontainer").append(statDiv);
                     statDiv.append("<div class='jersey'>Number: " + player.jersey + "</div>");
                     statDiv.append("<div class='position'>Position: " + player.position + "</div>");
                     statDiv.append("<div class='height'>Height: " + player.height + "</div>");
