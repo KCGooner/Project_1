@@ -128,12 +128,19 @@ padding: 0px;
     font-size: xx-large;
 }
 
+
 #teamsbackground :not(INPUT):not(TEXTAREA) {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+
+
+
+.hidden {
+    display: none;
+
 }
 
 
@@ -167,5 +174,5 @@ padding: 0px;
     height: 270px;  
     margin-top: 20px;
     padding: 10px;
-
 }
+
