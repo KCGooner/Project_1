@@ -131,3 +131,12 @@ padding: 0px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
+
+#playercontainer {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
