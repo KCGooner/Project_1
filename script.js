@@ -136,7 +136,7 @@ function getPlayer(playerId) {
                     statDiv.append("<div class='position'>Position: " + player.position + "</div>");
                     statDiv.append("<div class='height'>Height: " + player.height + "</div>");
                     statDiv.append("<div class='weight'>Weight: " + player.weight + "</div>");
-                    statDiv.append("<div class='college'>College: " + player.college + "</div>");
+                    statDiv.append("<div class='college'>" + player.college + "</div>");
                     statDiv.append("<div class='DOB'>DOB: " + player.dob + "</div>");
                 }
             })
