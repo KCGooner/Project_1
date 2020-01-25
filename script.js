@@ -11,6 +11,21 @@ var playerName = "Aldon%20Smith";
 //var teamName = "KC";
 //var playerId = "3311"
 
+$( document ).on( "pagecreate", "#demo-page", function() {
+        $( document ).on( "swipeleft swiperight", "#demo-page", function( e ) {
+            // We check if there is no open panel on the page because otherwise
+            // a swipe to close the left panel would also open the right panel (and v.v.).
+            // We do this by checking the data that the framework stores on the page element (panel: open).
+            if ( $( ".ui-page-active" ).jqmData( "panel" ) !== "open" ) {
+                if ( e.type === "swipeleft" ) {
+                    $( "#good-panel" ).panel( "open" );
+                } else if ( e.type === "swiperight" ) {
+                    $( "#felon-panel" ).panel( "open" );
+                }
+            }
+        });
+    });
+
 
 getTeams();
 
@@ -35,17 +50,24 @@ $(document).on("click", ".teams", function () {
     //getTeamPlayers($(this).attr("team-name"))
 
 $(document).on("click", ".team", function () {
-    getPlayer($(this).attr("player-code"));
+    var teamThis = $(this);
+    $("#teamcontainer").fadeOut('slow', function() {
+        getPlayer(teamThis.attr("player-code"));
+    });
+    $("#teamcontainer").effect( "slide", {}, 750, function() {
+        console.log(teamThis)
+    })
 });
 $(document).on("click", ".player", function () {
+    $("#playercontainer").show();
     getArrestInfo($(this).attr("player-name"));
 })
 
-$(document).on("swipeleft", ".teams", swipeLeftHandler);
-function swipeLeftHandler (event){
-    $(event.target).addClass("swiped");
-    console.log(event.target);
-}
+// $(document).on("swipeleft", ".teams", swipeLeftHandler);
+// function swipeLeftHandler (event){
+//     $(event.target).addClass("swiped");
+//     console.log(event.target);
+// }
 
 //getTeamPlayers(teamName);
 //getPlayer(playerId);
@@ -93,15 +115,16 @@ function getPlayer(playerId) {
             //let playersUl = $('<ul/>').addClass('list-player');
             //$("body").append(playersUl);
             $("#teamcontainer").empty();
+            $("#playercontainer").show();
             response.Players.forEach(function (player) {
                 if (player.playerId === playerId) {
                     console.log(player);
                     let playerDiv = $("<div>").addClass("player");
-                    $("#teamcontainer").append(playerDiv);
+                    $("#playercontainer").append(playerDiv);
                     playerDiv.attr("player-name", player.displayName);
                     playerDiv.append(player.displayName);
                     let statDiv = $("<div>").addClass("playerStat");
-                    $("#teamcontainer").append(statDiv);
+                    $("#playercontainer").append(statDiv);
                     statDiv.append("<div class='jersey'>Number: " + player.jersey + "</div>");
                     statDiv.append("<div class='position'>Position: " + player.position + "</div>");
                     statDiv.append("<div class='height'>Height: " + player.height + "</div>");
