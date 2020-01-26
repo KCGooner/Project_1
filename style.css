@@ -1,6 +1,8 @@
-
 #titlecontainer{
+    border: 2px solid black;
+    border-radius: 5px;
     margin: auto;
+    background-color: silver;
     color: black;
     text-align: center;
 }
@@ -19,13 +21,16 @@
 #startBtn{
     height: 150px;
     width: 400px;
-    background-color: green;
+    background-color: forestgreen;
     font-size: 50px;
     color: black
 }
 
 #textbox{
+    border: 2px solid black;
+    border-radius: 5px;
     margin: auto;
+    background-color: red;
     color: black;
     text-align: center;
     font-size: 60px;
@@ -67,7 +72,21 @@
     padding-bottom: 0px;
     margin: 0px;
 }
+/* .control{
+    display: inline-block;
+}
+.input{
+    width: 100%;
+    background-color: blanchedalmond;
+} */
 
+/* #teamsbackground{
+background-color: lightblue;
+height: 100%;
+width: 100%;
+margin: 0px;
+padding: 0px;
+} */
 
 .teams{
     background-color: lightblue;
@@ -90,6 +109,21 @@
     width: 224px;
     height: 60px;
     text-align: center;
+    padding: 10px 0px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black;
+    font-size: xx-large;
+}
+
+.player{
+    background-color: lightblue;
+    color: black;
+    width: 200px;
+    height: 60px;
+    text-align: center;
     padding: 18px 0px;
     margin: 5px;
     display: inline-block;
@@ -97,65 +131,40 @@
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
-
-.player{
-    background-color: lightblue;
-    color: black;
-    width: 250px;
-    height: 100px;
-    text-align: center;
-    padding: 10px 0px;
-    margin: 5px;
-    /* margin-left: 30px; */
-
-    display: inline-block;
-    border-radius: 2px;
-    box-shadow: 2.5px 5px black;
-    border: 2px solid black;
-    font-size: xx-large;
-}
-
-
 #teamsbackground :not(INPUT):not(TEXTAREA) {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
-
-
-
-.hidden {
-    display: none;
-
 }
-
-
 #playercontainer{
     position: absolute;
-    left: 510px;
-    display: none;
+    left: 545px;
+    /* display: none; */
+}
+.player{
+    position: absolute;
+    left: 545px;
 }
 
 .arrows{
     font-weight: bold;
-    font-size: 70px;
+    font-size: xx-large;
 }
 
 #left{
     float: left;
-    margin-right: 20px;
 }
 
 #right{
     float: right;
-    margin-left: 20px;
 }
 
 .playerStat{
-    /* text-align: center;
-    align-content: center; */
-    /* margin: auto; */
+    text-align: center;
+    align-content: center;
+    margin: auto;
     font-size: xx-large;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
@@ -163,5 +172,17 @@
     height: 270px;  
     margin-top: 20px;
     padding: 10px;
-}
 
+} 
+.good-green {
+    background: green;
+}
+.good-red {
+    background: red;
+}
+.felon-green {
+    background: green;
+}
+.felon-red {
+    background: red;
+}
