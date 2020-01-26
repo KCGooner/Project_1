@@ -1,9 +1,10 @@
-
+#splash {
+    background-image: url("https://wallpaperaccess.com/full/48074.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #titlecontainer{
-    /* border: 2px solid black; */
-    /* border-radius: 5px; */
-    margin: auto;
-    /* background-color: silver; */
+    /* margin: auto; */
     color: black;
     text-align: center;
 }
@@ -18,13 +19,12 @@
 #button{
     margin: 20px;
 }
-
 #startBtn{
     height: 150px;
-    width: 400px;
+    width: 300px;
     background-color: forestgreen;
     font-size: 50px;
-    color: black
+    color: white;
 }
 
 #textbox{
@@ -42,6 +42,9 @@
     text-align: center;
     font-size: xx-large;
     margin: 10px 0px 0px 0px;
+}
+a:link {
+    text-decoration: none;
 }
 
 #homeBtn:hover{
@@ -65,6 +68,30 @@
     padding-bottom: 0px;
     margin: 0px;
 }
+
+#searchbar{
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin: 0px;
+}
+/* .control{
+    display: inline-block;
+}
+.input{
+    width: 100%;
+    background-color: blanchedalmond;
+} */
+
+/* #teamsbackground{
+background-color: lightblue;
+height: 100%;
+width: 100%;
+margin: 0px;
+padding: 0px;
+} */
+
 .teams{
     background-color: lightblue;
     color: black;
@@ -81,15 +108,16 @@
 .team{
     background-color: lightblue;
     color: black;
-    width: 224px;
-    height: 60px;
+    width: 290px;
+    height: 100px;
     text-align: center;
-    padding: 18px 0px;
+    padding: 10px 0px;
     margin: 5px;
     display: inline-block;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
+    font-size: xx-large;
 }
 .player{
     background-color: lightblue;
@@ -104,9 +132,58 @@
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
-.playerStat {
+#teamsbackground :not(INPUT):not(TEXTAREA) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#playercontainer{
+    position: absolute;
+    left: 545px;
+    /* display: none; */
+}
+.player{
+    position: absolute;
+    left: 545px;
+}
+
+.arrows{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#left{
+    float: left;
+}
+
+#right{
+    float: right;
+}
+
+.playerStat{
     text-align: center;
+    align-content: center;
+    margin: auto;
+    font-size: xx-large;
+    border-radius: 2px;
     box-shadow: 2.5px 5px black;
-    border: 2px solid black;
-    width: 50%;
+    border: 2px solid black; 
+    height: 270px;  
+    margin-top: 20px;
+    padding: 10px;
+
+} 
+.good-green {
+    background: green;
+}
+.good-red {
+    background: red;
+}
+.felon-green {
+    background: green;
+}
+.felon-red {
+    background: red;
 }
