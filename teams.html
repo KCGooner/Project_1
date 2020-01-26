@@ -8,58 +8,88 @@
     <title>NFL Teams</title>
     <!-- Bulma Link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <!-- Font
-        Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <!--CSS Link-->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css" />
-   
-    <!-- <script src="script.js"></script> -->
-        <!-- <script src="http://code.jquery.com/js/jquery.mobile-1.4.5.min.js"></script> -->
     
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
 </head>
 
 
 <body id=teamsbackground>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <div id="header" data-role="page">
-        <div id="headerrow" class="columns is-multiline is-mobile">
-            
-            <div id="backBtn" class="column is-one-quarter">
-                <i class="fas fa-arrow-circle-left"></i> Back
+    <div data-role="page" id="felon-page" data-url="felon-page" tabindex="0">
+        <div id="header">
+            <div id="headerrow" class="columns is-multiline is-mobile">
+
+                <div id="backBtn" class="column is-one-quarter">
+                    <i class="fas fa-arrow-circle-left"></i> Back
+                </div>
+
+                <div id="pagetitle" class="column is-one-half">
+                    <i class="fas fa-football-ball"></i> O-ffender? <i class="fas fa-football-ball"></i>
+                </div>
+
+                <div id="homeBtn" class="column is-one-quarter">
+                    <a href="index.html">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </div>
             </div>
 
-            <div id="pagetitle" class="column is-one-half">
-                <i class="fas fa-football-ball"></i>   O-ffender?   <i class="fas fa-football-ball"></i>
-            </div>
 
-            <div id="homeBtn" class="column is-one-quarter">
-                <i class="fas fa-home"></i> Home
+            <div id="teamcontainer" data-role="main" class="ui-content"></div>
+            <!-- <div id="playercontainer"> -->
+
+                <!-- <div class="arrows" id="left"></div>
+                <div class="arrows" id="right"></div> -->
+                    <!-- <a href="#felon-panel">Open left panel</a> -->
+
+
+                    <!-- <a href="#good-panel" data-icon="carat-l" data-iconpos="notext" data-shadow="false"
+                        data-iconshadow="false"
+                        class="ui-nodisc-icon ui-link ui-btn-right ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all"
+                        data-role="button" role="button">Open right panel</a> -->
+
+                   
+                   <!-- ############ PANELS #################### -->
+                <div id="panelsOnly"> 
+                   <!-- <div data-role="panel" id="felon-panel" data-display="push" data-theme="b"
+                        class="ui-panel ui-panel-position-left ui-panel-display-reveal ui-body-b ui-panel-animate ui-panel-closed felon-red">
+                        <div class="ui-panel-inner">
+                            <p>Left reveal panel.</p><a href="#" data-rel="close"
+                                class="ui-btn ui-corner-all ui-shadow ui-mini ">Close</a>
+                        </div>
+                    </div> -->
+
+
+                    <!-- <div data-role="panel" id="good-panel" data-display="push" data-theme="b" data-position="right" 
+                        class="ui-panel ui-panel-position-right ui-panel-display-push ui-panel-animate ui-panel-closed good-green">
+                        <div class="ui-panel-inner">
+                            <p>Right push panel.</p><a href="#" data-rel="close">test</a>
+                        </div>
+                    </div>  -->
+
+                   </div> 
+
+
+
             </div>
         </div>
 
 
-        <div id="teamcontainer" data-role="main" class="ui-content">
 
-          
 
-        </div>
 
-        <!-- <script>
-            src = "https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity = "sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-            crossorigin = "anonymous"
-        </script> -->
-        <!-- Javascript File Link -->
-        <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
 
-        
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
-      <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script> 
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="script.js"></script>
- 
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </body>
 
 </html>

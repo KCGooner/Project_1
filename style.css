@@ -1,4 +1,3 @@
-
 #titlecontainer{
     border: 2px solid black;
     border-radius: 5px;
@@ -73,13 +72,13 @@
     padding-bottom: 0px;
     margin: 0px;
 }
-.control{
+/* .control{
     display: inline-block;
 }
 .input{
     width: 100%;
     background-color: blanchedalmond;
-}
+} */
 
 /* #teamsbackground{
 background-color: lightblue;
@@ -92,7 +91,7 @@ padding: 0px;
 .teams{
     background-color: lightblue;
     color: black;
-    width: 200px;
+    width: 224px;
     height: 60px;
     text-align: center;
     padding: 18px 0px;
@@ -107,15 +106,16 @@ padding: 0px;
 .team{
     background-color: lightblue;
     color: black;
-    width: 200px;
+    width: 224px;
     height: 60px;
     text-align: center;
-    padding: 18px 0px;
+    padding: 10px 0px;
     margin: 5px;
     display: inline-block;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
+    font-size: xx-large;
 }
 
 .player{
@@ -130,4 +130,59 @@ padding: 0px;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
+}
+#teamsbackground :not(INPUT):not(TEXTAREA) {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+#playercontainer{
+    position: absolute;
+    left: 545px;
+    /* display: none; */
+}
+.player{
+    position: absolute;
+    left: 545px;
+}
+
+.arrows{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+#left{
+    float: left;
+}
+
+#right{
+    float: right;
+}
+
+.playerStat{
+    text-align: center;
+    align-content: center;
+    margin: auto;
+    font-size: xx-large;
+    border-radius: 2px;
+    box-shadow: 2.5px 5px black;
+    border: 2px solid black; 
+    height: 270px;  
+    margin-top: 20px;
+    padding: 10px;
+
+} 
+.good-green {
+    background: green;
+}
+.good-red {
+    background: red;
+}
+.felon-green {
+    background: green;
+}
+.felon-red {
+    background: red;
 }
