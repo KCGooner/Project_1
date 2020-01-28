@@ -1,8 +1,10 @@
+#splash {
+    background-image: url("https://wallpaperaccess.com/full/48074.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
 #titlecontainer{
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: auto;
-    background-color: silver;
+    /* margin: auto; */
     color: black;
     text-align: center;
 }
@@ -17,20 +19,19 @@
 #button{
     margin: 20px;
 }
-
 #startBtn{
     height: 150px;
-    width: 400px;
+    width: 300px;
     background-color: forestgreen;
     font-size: 50px;
-    color: black
+    color: white;
 }
 
 #textbox{
-    border: 2px solid black;
-    border-radius: 5px;
+    /* border: 2px solid black;
+    border-radius: 5px; */
     margin: auto;
-    background-color: red;
+    /* background-color: red; */
     color: black;
     text-align: center;
     font-size: 60px;
@@ -41,6 +42,9 @@
     text-align: center;
     font-size: xx-large;
     margin: 10px 0px 0px 0px;
+}
+a:link {
+    text-decoration: none;
 }
 
 #homeBtn:hover{
@@ -59,7 +63,7 @@
 
 #pagetitle{
     text-align: center;
-    font-size: 70px;
+    font-size: 25px;
     padding-top: 10px;
     padding-bottom: 0px;
     margin: 0px;
@@ -101,13 +105,11 @@ padding: 0px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
 }
-
-
 .team{
     background-color: lightblue;
     color: black;
     width: 224px;
-    height: 60px;
+    height: 90px;
     text-align: center;
     padding: 10px 0px;
     margin: 5px;
@@ -115,17 +117,16 @@ padding: 0px;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
-    font-size: xx-large;
+    font-size: x-large;
 }
-
 .player{
     background-color: lightblue;
     color: black;
     width: 200px;
     height: 60px;
-    text-align: center;
     padding: 18px 0px;
     margin: 5px;
+    text-align: center;
     display: inline-block;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
