@@ -108,8 +108,8 @@ padding: 0px;
 .team{
     background-color: lightblue;
     color: black;
-    width: 290px;
-    height: 100px;
+    width: 224px;
+    height: 90px;
     text-align: center;
     padding: 10px 0px;
     margin: 5px;
@@ -117,7 +117,7 @@ padding: 0px;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
-    font-size: xx-large;
+    font-size: x-large;
 }
 .player{
     background-color: lightblue;
