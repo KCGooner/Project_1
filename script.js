@@ -1,8 +1,8 @@
-const nflArrestSite = "http://nflarrest.com/api/v1/player/arrests/";
+const nflArrestSite = "https://nflarrest.com/api/v1/player/arrests/";
 // const nflTeamSite1 = "https://www.fantasyfootballnerd.com/service/nfl-teams/json/pp964njgnuwu";
 // const nflPlayerSite1 = "https://www.fantasyfootballnerd.com/service/nfl-teams/json/pp964njgnuwu";
-const nflTeamSite = "http://www.markstout.com/api/nfl/teams";
-const nflPlayerSite = "http://www.markstout.com/api/nfl/players"
+const nflTeamSite = "https://www.markstout.com/api/nfl/teams";
+const nflPlayerSite = "https://www.markstout.com/api/nfl/players"
 
 
 //MAIN here, start by loading list of teams
