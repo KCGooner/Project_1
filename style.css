@@ -55,14 +55,18 @@ html, body{
     color: black;
 }
 
+.ui-page-theme-a a:active{
+    color: black;
+}
+
 .ui-page-theme-a a:hover{
     color: red;
 }
 
-#homeBtn:hover{
+/* #homeBtn:hover{
     color: red !important;
 
-}
+} */
 
 #backBtn{
     text-align: center; 
@@ -76,7 +80,7 @@ html, body{
 
 #pagetitle{
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     padding-top: 10px;
     padding-bottom: 0px;
     margin: 0px;
