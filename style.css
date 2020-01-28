@@ -1,7 +1,8 @@
-html, body {
+html, body{
     height: 100%;
     width: 100%;
 }
+
 #splash {
     background-image: url("https://wallpaperaccess.com/full/48074.jpg");
     /* background-repeat: no-repeat; */
@@ -35,6 +36,7 @@ html, body {
 
 #textbox{
     margin: auto;
+    /* background-color: red; */
     color: white;
     text-align: center;
     font-size: 60px;
@@ -46,12 +48,18 @@ html, body {
     font-size: xx-large;
     margin: 10px 0px 0px 0px;
 }
-a:link {
-    text-decoration: none;
+
+.ui-page-theme-a a:visited{
+    color: black;
+}
+
+.ui-page-theme-a a:hover{
+    color: red;
 }
 
 #homeBtn:hover{
-    color: red;
+    color: red !important;
+
 }
 
 #backBtn{
@@ -83,7 +91,7 @@ a:link {
     background-color: lightblue;
     color: black;
     width: 224px;
-    height: 90px;
+    height: 60px;
     text-align: center;
     padding: 18px 0px;
     margin: 5px;
@@ -106,6 +114,7 @@ a:link {
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
     font-size: x-large;
+    float: left;
 }
 .player{
     background-color: lightblue;
@@ -127,10 +136,12 @@ a:link {
     -o-user-select: none;
     user-select: none;
 }
+
 .player{
-    position: absolute;
-    left: 545px;
+    position: relative;
+    left: ;
 }
+
 .playerStat{
     text-align: center;
     align-content: center;
@@ -140,10 +151,30 @@ a:link {
     box-shadow: 2.5px 5px black;
     border: 2px solid black; 
     height: 270px;  
-    margin-top: 20px;
+    margin-top: 100px;
     padding: 10px;
-
+    width: 30%;
 } 
+
+.felonBtn{
+    font-size: xx-large;
+
+}
+.felonBtn:hover{
+    /* background-color: red; */
+    color: red;
+
+}
+
+.goodBtn{
+    font-size: xx-large;
+}
+
+.goodBtn:hover{
+    /* background-color: green; */
+    color: green;
+}
+
 .good-green {
     background: green;
 }
