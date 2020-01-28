@@ -29,7 +29,7 @@ html, body{
 #startBtn{
     height: 150px;
     width: 300px;
-    background-color: forestgreen;
+    background-color: lightseagreen;
     font-size: 50px;
     color: white;
 }
@@ -76,7 +76,7 @@ html, body{
 
 #pagetitle{
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     padding-top: 10px;
     padding-bottom: 0px;
     margin: 0px;
@@ -89,25 +89,9 @@ html, body{
     padding-bottom: 0px;
     margin: 0px;
 }
-/* .control{
-    display: inline-block;
-}
-.input{
-    width: 100%;
-    background-color: blanchedalmond;
-} */
-
-/* #teamsbackground{
-background-color: lightblue;
-height: 100%;
-width: 100%;
-margin: 0px;
-padding: 0px;
-} */
-
 .teams{
-    background-color: lightblue;
-    color: black;
+    /* background-color: lightseagreen; */
+    color:black;
     width: 224px;
     height: 60px;
     text-align: center;
@@ -117,9 +101,16 @@ padding: 0px;
     border-radius: 2px;
     box-shadow: 2.5px 5px black;
     border: 2px solid black;
+    background-image: url("http://www.screensaversplanet.com/img/screenshots/screensavers/nfl-leatherback-logos-1.png");
+    background-image: cross-fade();
+    background-position: center;
+    /* opacity: 0.5; */
+    background-size: 40% 100%;
+    font-weight: bolder;
 }
+
 .team{
-    background-color: lightblue;
+    background-color: lightseagreen;
     color: black;
     width: 224px;
     height: 90px;
@@ -134,7 +125,7 @@ padding: 0px;
 }
 
 .player{
-    background-color: lightblue;
+    background-color: lightseagreen;
     color: black;
     width: 200px;
     height: 60px;
