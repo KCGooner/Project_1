@@ -49,11 +49,9 @@ $(document).on("click", "#backBtn", function () {
 //////////////////////////////////////////////////////
 //This creates the swipe listener
 function createSwipe() {
-    //$(document).on("pagecreate", "#felon-page", function () {
     $(document).on("swipeleft swiperight", "#felon-page", function (e) {
         // We check if there is no open panel on the page because otherwise
-        // a swipe to close the left panel would also open the right panel (and v.v.).
-        // We do this by checking the data that the framework stores on the page element (panel: open).
+        // a swipe to close the left panel would also open the right panel
         if ($(".ui-page-active").jqmData("panel") !== "open") {
             if (e.type === "swipeleft") {
                 $("#good-panel").panel().panel("open");
@@ -62,10 +60,13 @@ function createSwipe() {
             }
         }
     });
-
+    $(document).on("click", ".felonBtn", function (d){
+        $("#felon-panel").panel().panel("open");
+    });
+    $(document).on("click", ".goodBtn", function (d){
+        $("#good-panel").panel().panel("open");
+    });
 }
-
-
 ///////////////////////////////////////////////////////////
 //get a single players info using the ID in the api
 function getPlayer(playerId) {
@@ -119,8 +120,6 @@ function getTeamPlayers(team) {
         .then(function (response) {
             console.log(response);
             $("#teamcontainer").empty();
-            //let playersUl = $('<ul/>').addClass('list-players');
-            //$("body").append(playersUl);
             response.Players.forEach(function (player) {
                 if (player.team === team) {
                     console.log(player);
@@ -128,13 +127,10 @@ function getTeamPlayers(team) {
                     $("#teamcontainer").append(playersDiv);
                     playersDiv.attr("player-code", player.playerId);
                     playersDiv.append(player.displayName);
-
-                    //playersUl.append("<li class='list-players-item' player-code='" + player.playerId + "'>" + player.displayName + "</li>");
                 }
             })
         })
 }
-
 ///////////////////////////////////////////////////////////
 //Function to get team info and update divs
 function getTeams() {
@@ -183,10 +179,8 @@ function getArrestInfo(playerName) {
             
             $("#panelsOnly").append(felonPanelDiv);
             $("#panelsOnly").append(goodPanelDiv);
-            //plaDiv.attr("player-name", player.displayName);
             if(response[0]){
                 console.log("felon");
-                //guiltyDiv.append(response[0].Name + response[0].Team_name + response[0].Category + response[0].Description + response[0].Outcome);
                 felonPanelDiv.addClass("felon-green");
                 goodPanelDiv.addClass("good-red");
                 felonPanelDiv.append("<div class='ui-panel-inner'><p> CORRECT! <br></p>" + 
